@@ -123,6 +123,7 @@ class CartController extends Controller
         $total = $cartItems->sum(function ($item) {
             return $item->quantity * $item->product->price;
         });
+        
         $itemsCount = $cartItems->sum('quantity');
 
         foreach ($cartItems as $cartItem) {
